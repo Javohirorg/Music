@@ -1,0 +1,334 @@
+/* font family */
+
+@font-face {
+    font-family: 'consolas';
+    src: url(./fonts/consolas.ttf);
+}
+@font-face {
+    font-family: 'space';
+    src: url(./fonts/space.ttf);
+}
+@font-face {
+    font-family: 'gabriola';
+    src: url(./fonts/Gabriola.ttf);
+}
+@font-face {
+    font-family: 'cour';
+    src: url(./fonts/courbd.ttf);
+}
+
+/* font family */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    background: #000;
+}
+.container{
+    width: 100%;
+    position: relative;
+    background: #000;
+    text-align: center;
+    overflow: hidden;    
+}
+.container *{
+    color: #ffffff;
+}
+/* .container * img,
+.container img{
+    width: 100px;
+} */
+header{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    padding: 7px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: 'space';
+    position: relative;
+    display: block;
+}
+.caruosel{
+    width: 180px;
+    height: 180px;
+    margin-top: 15px;
+    border-radius: 14px;
+    border: 1.5px red solid;
+    transition: 1s;
+}
+.Y-fav{
+    margin-top: 15px;
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+.Y-fav h1{
+    font-family: 'cour';
+}
+.Y-fav hr{
+    width: 100%;
+    left:0;
+    right: 0;
+    margin: 7px 0;
+}
+.Y-fav-playlist{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 5px;
+}
+.Y-fav-playlist-box{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 15px;
+}
+.Y-fav-playlist-box img{
+    width: 180px;
+    height: 180px;
+    border-radius: 17px;
+}
+.Y-fav-playlist-box p{
+    font-size: large;
+    font-family:'consolas' ;
+}
+.Ext-btn{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+}
+.Ext-btn h3{
+    font-family:"consolas";
+
+}
+.ext-fav-muz{
+    width: 25px;
+    height: 25px;
+}
+
+.player{
+    border-top: 2.5px solid #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+
+}
+.player{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: -500px;
+    /* right: 0; */
+    bottom: 0;
+    transition: 0.7s;
+    background: rgba(5, 4, 4, 0.959);
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    border: none;
+    padding-top: 15px;
+}
+.player-btn img{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+.prev{
+    transform: rotate(180deg);
+}
+.player-ext-btn{
+    width: 100%;
+    display: flex;
+    padding: 5px 15px;
+    justify-content: space-between;
+}
+.player-ext-btn img{
+    width: 30px;
+    height: 30px;
+    
+}
+.backToHome{
+    transform: rotate(180deg);
+}
+.return-muz{
+    width: 30px;
+    height: 30px;
+    margin: 10px 0;
+    transition: 0.7s;
+}
+.muz-img{
+    margin-top: 30px;
+    width: 200px;
+    border-radius: 15px;
+    height:200px;
+}
+.player h2{
+    margin-top: 7px;
+    letter-spacing: 1.4px;
+    font-family: 'gabriola';
+}
+#muz-seek{
+    width: 80%;
+    margin-top: 15px;
+    /* background-color: red; */
+}
+.muz-time{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'consolas';
+}
+
+.player-btn{
+    margin-top: 20px;
+    position: relative;
+}
+.PageMain{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    transform: scale(0.7) rotate(180deg);
+}
+.playlist{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -1000px;
+    /* left: 0; */
+    bottom: 0;
+    z-index: 11;
+    background:url(../assets/image/playlist-bg.jpg);
+    background-position:center center;
+    background-attachment: fixed;
+    background-size:cover;
+    overflow-y: auto;
+    transition: 1s;
+}
+.playlist h2{
+    margin-top: 10px;
+    font-size: 23px;
+    font-family:'space';
+    letter-spacing: 1.5px;
+    position: relative;
+}
+.playlist h2 img{
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+.playlist #mapList{
+    width: 100%;
+    height: 100px;
+    padding: 10px 15px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.maplist-image{
+    width:70px;
+    height: 70px;
+    border-radius: 10px;
+}
+.mapList-about{
+    font-family: 'gabriola';
+    letter-spacing: 1.5px;
+    font-weight: 800px;
+    line-height: 30px;
+}
+.mapBtn{
+    width: 20px;
+    margin-top: 20px;
+    height: 20px;
+}
+.like{
+    width: 30px;
+    height: 30px;
+    margin: 10px 15px;
+    transition: 1s all;
+}
+.Like-list{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    bottom: 0;
+    left: -500px;
+    background: url(../assets/image/Y-fav-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 100;
+    text-align: center;
+    overflow-y: auto;
+    transition: 1s;
+}
+.Like-list h2{
+    margin-top: 20px;
+    font-family: 'space';
+}
+.Like-list h3{
+    font-family: 'cour';
+}
+.Like-list h3 img{
+    transform: translateY(5px);
+    width:20px;
+    height: 20px;
+}
+.likes{
+    color: transparent!important;
+}
+.likes-list{
+    width: 100%;
+    height:100px;
+    display: flex;
+    padding: 5px 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.likes-list-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.like-music-h{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+.error{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index:500;
+    background: #000000;
+    text-align: center;
+    justify-content: center;
+    /* padding: 0 auto; */
+    font-family: 'space';
+    
+}
+.error img{
+    width: 50px;
+    height: 50px;
+}
